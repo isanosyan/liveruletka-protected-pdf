@@ -9,7 +9,6 @@ function generate_file($i = 0) {
     $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
     $html = "Hello world!";
     
-    // Print text using writeHTMLCell()
     $pdf->AddPage();
     $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
     $pdf->SetProtection([], 'testpassword', null, 3);
